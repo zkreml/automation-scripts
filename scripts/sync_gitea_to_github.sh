@@ -26,3 +26,4 @@ git push $GITHUB_REPO
 
 log "Synchronizace dokončena"
 
+
