@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Nastavení proměnných
-GITEA_REPO="ssh://git@git.arch-linux.cz:29418/Archos/prehlad-financi-komunity.git"
-GITHUB_REPO="git@github.com:zkreml/prehlad-financi-komunity.git"
-REPO_DIR="/home/archos/git_archlinuxcz/prehlad-financi-komunity"
-LOG_DIR="/home/archos/git_archlinuxcz/automation-scripts/logs"
+GITEA_REPO="your_gitea_repo_url"
+GITHUB_REPO="your_github_repo_url"
+REPO_DIR="path_to_your_local_repo"
+LOG_DIR="path_to_your_log_directory"
 LOG_FILE="$LOG_DIR/sync_gitea_to_github.log"
 
 # Funkce pro logování
