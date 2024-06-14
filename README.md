@@ -11,10 +11,10 @@ Skript `sync_gitea_to_github.sh` je určen pro synchronizaci změn z repozitář
 #### Nastavení a použití
 
 1. **Upravte následující proměnné ve skriptu `sync_gitea_to_github.sh` podle svých potřeb:**
-    - `GITHUB_REPO` - URL GitHub repozitáře.
-    - `GITEA_REPO` - URL Gitea repozitáře.
-     - `REPO_DIR` - Cesta k lokálnímu klonu repozitáře.
-     - `LOG_FILE` - Cesta k log souboru (`/path/to/your/logs/sync_gitea_to_github.log`).
+- `GITHUB_REPO` - URL GitHub repozitáře.
+- `GITEA_REPO` - URL Gitea repozitáře.
+- `REPO_DIR` - Cesta k lokálnímu klonu repozitáře.
+- `LOG_FILE` - Cesta k log souboru (`/path/to/your/logs/sync_gitea_to_github.log`).
 
 ## Logy
 
