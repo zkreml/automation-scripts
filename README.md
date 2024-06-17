@@ -16,6 +16,33 @@ Skript `sync_gitea_to_github.sh` je určen pro synchronizaci změn z repozitář
 - `REPO_DIR` - Cesta k lokálnímu klonu repozitáře.
 - `LOG_FILE` - Cesta k log souboru (`/path/to/your/logs/sync_gitea_to_github.log`).
 
+### create_release.sh
+
+Skript `create_release.sh` je určen pro vytváření archívů projektu a jejich přesun do specifikovaného adresáře. Tento skript vytvoří archivy ve formátech `.tar.gz` a `.zip`, vyloučí specifikované soubory a přesune archivy do adresáře `~/stažené`.
+
+#### Použití
+
+1. **Upravte název archivu ve skriptu `create_release.sh` podle svých potřeb:**
+
+```bash
+ARCHIVE_NAME="phanpy-cz"
+```
+
+2. **Spusťte skript `create_release.sh`:**
+
+```bash
+./create_release.sh
+```
+
+3. **Výstup skriptu:**
+
+ Skript vytvoří archivy ve formátech `.tar.gz` a `.zip`, které budou přesunuty do adresáře `~/stažené`.
+
+```bash
+~/stažené/phanpy-cz.tar.gz
+~/stažené/phanpy-cz.zip
+```
+
 ## Logy
 
 Logy ze skriptů jsou ukládány do souboru `/path/to/your/logs/nazev_skriptu.log`.
