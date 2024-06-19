@@ -42,7 +42,29 @@ ARCHIVE_NAME="phanpy-cz"
 ~/stažené/phanpy-cz.tar.gz
 ~/stažené/phanpy-cz.zip
 ```
+### update_system.sh
 
+Skript `update_system.sh` je určen pro pravidelnou aktualizaci systémových balíčků. Tento skript aktualizuje balíčky a ukládá výsledky do log souboru.
+
+#### Použití
+
+1. **Spusťte skript `update_system.sh`:**
+
+    ```bash
+    ./update_system.sh
+    ```
+
+2. **Nastavení Cron Jobu pro automatické aktualizace:**
+
+    ```bash
+    crontab -e
+    ```
+
+    Přidejte nový cron job, který bude spouštět skript každý den ve 3 hodiny ráno:
+
+    ```bash
+    0 3 * * * /path/to/your/scripts/update_system.sh
+    ```
 ## Logy
 
 Logy ze skriptů jsou ukládány do souboru `/path/to/your/logs/nazev_skriptu.log`.
