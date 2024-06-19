@@ -65,6 +65,37 @@ Skript `update_system.sh` je určen pro pravidelnou aktualizaci systémových ba
     ```bash
     0 3 * * * /path/to/your/scripts/update_system.sh
     ```
+    ### clean_logs.sh
+
+Skript `clean_logs.sh` je určen pro pravidelné čištění log souborů starších než zadaný počet dní. Tento skript vymaže všechny log soubory ve specifikovaném adresáři, které jsou starší než zadaný počet dní.
+
+#### Použití
+
+1. **Upravte následující proměnné ve skriptu `clean_logs.sh` podle svých potřeb:**
+ - `LOG_DIR` - Cesta k adresáři s log soubory.
+ - `LOG_FILE` - Cesta k log souboru (`/path/to/your/logs/clean_logs.log`).
+ - `DAYS_TO_KEEP` - Počet dní, po které budou log soubory uchovávány.
+
+2. **Spusťte skript `clean_logs.sh`:**
+
+    ```bash
+    ./clean_logs.sh
+    ```
+
+3. **Nastavení Cron Jobu pro automatické čištění:**
+
+    Otevřete crontab pro úpravy:
+
+    ```bash
+    crontab -e
+    ```
+
+    Přidejte nový cron job, který bude spouštět skript první den v měsíci ve 2 hodiny ráno:
+
+    ```bash
+    0 2 1 * * /path/to/your/scripts/clean_logs.sh
+    ```
+
 ## Logy
 
 Logy ze skriptů jsou ukládány do souboru `/path/to/your/logs/nazev_skriptu.log`.
