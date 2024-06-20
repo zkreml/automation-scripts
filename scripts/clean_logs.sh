@@ -1,19 +1,21 @@
 #!/bin/bash
 
 # Nastavení proměnných
-LOG_DIR="/path/to/your/logs"
-LOG_FILE="/path/to/your/logs/clean_logs.log"
-DAYS_TO_KEEP=30
+LOG_DIR="/path/to/your/log"
+LOG_FILES=("sync_gitea_to_github.log" "clean_logs.log")
 
-# Přepsání log souboru
-echo "Starting log cleanup at $(date)" > $LOG_FILE
+# Přepsání log souboru pro diagnostiku
+echo "Starting log cleanup at $(date)"
 
-# Vyčištění log souborů starších než zadaný počet dní
-find $LOG_DIR -type f -name "*.log" -mtime +$DAYS_TO_KEEP -exec rm -f {} \; >> $LOG_FILE 2>&1
+# Smazání a znovuvytvoření log souborů
+for LOG_FILE in "${LOG_FILES[@]}"; do
+    if [ -f "$LOG_DIR/$LOG_FILE" ]; then
+        rm "$LOG_DIR/$LOG_FILE"
+        echo "Deleted $LOG_FILE"
+    fi
+    touch "$LOG_DIR/$LOG_FILE"
+    echo "Created new $LOG_FILE"
+done
 
-if [ $? -eq 0 ]; then
-    echo "Log cleanup completed successfully at $(date)" >> $LOG_FILE
-else
-    echo "Error: Log cleanup failed at $(date)" >> $LOG_FILE
-    exit 1
-fi
+echo "Log cleanup completed successfully at $(date)"
+
