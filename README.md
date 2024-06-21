@@ -50,22 +50,11 @@ Skript `update_system.sh` je určen pro pravidelnou aktualizaci systémových ba
 
 1. **Spusťte skript `update_system.sh`:**
 
-    ```bash
-    ./update_system.sh
-    ```
+```bash
+  ./update_system.sh
+ ```
 
-2. **Nastavení Cron Jobu pro automatické aktualizace:**
-
-    ```bash
-    crontab -e
-    ```
-
-    Přidejte nový cron job, který bude spouštět skript každý den ve 3 hodiny ráno:
-
-    ```bash
-    0 3 * * * /path/to/your/scripts/update_system.sh
-    ```
-    ### clean_logs.sh
+### clean_logs.sh
 
 Skript `clean_logs.sh` je určen pro pravidelné čištění log souborů starších než zadaný počet dní. Tento skript vymaže všechny log soubory ve specifikovaném adresáři, které jsou starší než zadaný počet dní.
 
@@ -82,20 +71,18 @@ Skript `clean_logs.sh` je určen pro pravidelné čištění log souborů starš
     ./clean_logs.sh
     ```
 
-3. **Nastavení Cron Jobu pro automatické čištění:**
 
-    Otevřete crontab pro úpravy:
+### check_backups.sh
 
-    ```bash
-    crontab -e
-    ```
+Skript `check_backups.sh` slouží k manuální kontrole záloh pomocí nástrojů BorgBackup a Rsync. Umožňuje rychle ověřit, zda byly zálohy úspěšně provedeny a zda počet souborů a složek v zdrojovém a cílovém adresáři odpovídá očekáváním.
 
-    Přidejte nový cron job, který bude spouštět skript první den v měsíci ve 2 hodiny ráno:
+#### Použití
 
-    ```bash
-    0 2 1 * * /path/to/your/scripts/clean_logs.sh
-    ```
+1. Spuštění skriptu:
+   ```bash
+   ./check_backups.sh
 
+   
 ## Logy
 
 Logy ze skriptů jsou ukládány do souboru `/path/to/your/logs/nazev_skriptu.log`.
@@ -104,9 +91,9 @@ Logy ze skriptů jsou ukládány do souboru `/path/to/your/logs/nazev_skriptu.lo
 
 Spouštějte skripty přímo ve složce, kde máte nastaveny všechny cesty:
 
-```bash
-/path/to/your/script.sh
-```
+     ```bash
+    /path/to/your/script.sh
+    ```
 
 ## Nastavení Cron Jobu
 
@@ -114,7 +101,7 @@ Spouštějte skripty přímo ve složce, kde máte nastaveny všechny cesty:
 
     Otevřete crontab pro úpravy:
 ```bash
-    crontab -e
+crontab -e
 ```
 
 2. Přidejte nový cron job, který bude spouštět skript podle potřeby. Například, pro spouštění skriptu každou hodinu:
@@ -129,4 +116,3 @@ Tento repozitář bude v budoucnu rozšiřován o další automatizační skript
 ## Kontakt
 
 Pro další informace nebo podporu kontaktujte správce projektu.
-
