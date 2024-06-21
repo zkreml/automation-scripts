@@ -70,7 +70,24 @@ Skript `clean_logs.sh` je určen pro pravidelné čištění log souborů starš
     ```bash
     ./clean_logs.sh
     ```
+### backup_script.sh
 
+Skript `backup_script.sh` je určen pro zálohování důležitých dat z uživatelského domovského adresáře pomocí `rsync` a `BorgBackup`. Tento skript kombinuje robustnost BorgBackup pro efektivní a bezpečné archivování s datovou deduplikací a rychlost `rsync` pro synchronizaci souborů.
+
+#### Nastavení a použití
+
+1. **Upravte následující proměnné ve skriptu `backup_script.sh` podle svých potřeb:**
+  - `EXTERNAL_DRIVE` - Cesta k externímu disku.
+  - `MOUNT_POINT` - Bod připojení pro externí disk.
+  - `BACKUP_DIR` - Cesta k adresáři pro ukládání záloh na připojeném disku.
+  - `BORG_SCRIPT` - Cesta k skriptu BorgBackup, který spravuje zálohy Borg.
+
+2. **Spusťte skript `backup_script.sh`:**
+
+   ```bash
+   ./backup_script.sh
+   ```
+   
 
 ### check_backups.sh
 
