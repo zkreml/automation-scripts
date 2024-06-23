@@ -111,7 +111,18 @@ Spouštějte skripty přímo ve složce, kde máte nastaveny všechny cesty:
      ```bash
     /path/to/your/script.sh
     ```
+### update_fork.sh
 
+Skript `update_fork.sh` slouží k aktualizaci vašeho forku repozitáře Phanpy s nejnovějšími změnami z originálního repozitáře. Tento proces zahrnuje přidání upstream repozitáře (pokud ještě není nastaven), stahování změn z tohoto repozitáře, sloučení těchto změn do vaší hlavní větve a následný push změn zpět do vašeho repozitáře na GitHubu.
+
+#### Použití
+
+1. Uložte skript do souboru, například `update_fork.sh`.
+2. Nastavte oprávnění k spuštění pomocí příkazu:
+   ```bash
+   chmod +x update_fork.sh
+  ```
+  
 ## Nastavení Cron Jobu
 
 1. Pro automatické spouštění skriptů můžete nastavit cron job:
