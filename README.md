@@ -96,9 +96,10 @@ Skript `check_backups.sh` slouží k manuální kontrole záloh pomocí nástroj
 #### Použití
 
 1. Spuštění skriptu:
-   ```bash
-   ./check_backups.sh
-  ```
+
+```bash
+./check_backups.sh
+```
  ### update_fork.sh
 
 Skript `update_fork.sh` slouží k aktualizaci vašeho forku repozitáře Phanpy s nejnovějšími změnami z originálního repozitáře. Tento proces zahrnuje přidání upstream repozitáře (pokud ještě není nastaven), stahování změn z tohoto repozitáře, sloučení těchto změn do vaší hlavní větve a následný push změn zpět do vašeho repozitáře na GitHubu.
@@ -108,9 +109,9 @@ Skript `update_fork.sh` slouží k aktualizaci vašeho forku repozitáře Phanpy
 1. Uložte skript do souboru, například `update_fork.sh`.
 2. Nastavte oprávnění k spuštění pomocí příkazu:
 
-  ```bash
+```bash
    chmod +x update_fork.sh
-  ```
+```
    
 ## Logy
 
