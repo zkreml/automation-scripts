@@ -108,9 +108,9 @@ Skript `update_fork.sh` slouží k aktualizaci vašeho forku repozitáře Phanpy
 1. Uložte skript do souboru, například `update_fork.sh`.
 2. Nastavte oprávnění k spuštění pomocí příkazu:
 
- ```bash
+  ```bash
    chmod +x update_fork.sh
- ```
+  ```
    
 ## Logy
 
