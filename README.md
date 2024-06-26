@@ -4,7 +4,7 @@ Tento repozitář obsahuje různé automatizační skripty, které slouží ke z
 
 ## Skripty
 
-### sync_gitea_to_github.sh
+### 1. sync_gitea_to_github.sh
 
 Skript `sync_gitea_to_github.sh` je určen pro synchronizaci změn z repozitáře na Gitea do repozitáře na GitHub. Tento skript zajistí, že veškeré změny provedené v repozitáři na Gitea budou automaticky přeneseny do odpovídajícího repozitáře na GitHubu.
 
@@ -16,7 +16,7 @@ Skript `sync_gitea_to_github.sh` je určen pro synchronizaci změn z repozitář
 - `REPO_DIR` - Cesta k lokálnímu klonu repozitáře.
 - `LOG_FILE` - Cesta k log souboru (`/path/to/your/logs/sync_gitea_to_github.log`).
 
-### create_release.sh
+### 2. create_release.sh
 
 Skript `create_release.sh` je určen pro vytváření archívů projektu a jejich přesun do specifikovaného adresáře. Tento skript vytvoří archivy ve formátech `.tar.gz` a `.zip`, vyloučí specifikované soubory a přesune archivy do adresáře `~/stažené`.
 
@@ -42,7 +42,7 @@ ARCHIVE_NAME="phanpy-cz"
 ~/stažené/phanpy-cz.tar.gz
 ~/stažené/phanpy-cz.zip
 ```
-### update_system.sh
+### 3. update_system.sh
 
 Skript `update_system.sh` je určen pro pravidelnou aktualizaci systémových balíčků. Tento skript aktualizuje balíčky a ukládá výsledky do log souboru.
 
@@ -54,7 +54,7 @@ Skript `update_system.sh` je určen pro pravidelnou aktualizaci systémových ba
   ./update_system.sh
  ```
 
-### clean_logs.sh
+### 4. clean_logs.sh
 
 Skript `clean_logs.sh` je určen pro pravidelné čištění log souborů starších než zadaný počet dní. Tento skript vymaže všechny log soubory ve specifikovaném adresáři, které jsou starší než zadaný počet dní.
 
@@ -70,7 +70,7 @@ Skript `clean_logs.sh` je určen pro pravidelné čištění log souborů starš
     ```bash
     ./clean_logs.sh
     ```
-### backup_script.sh
+### 5. backup_script.sh
 
 Skript `backup_script.sh` je určen pro zálohování důležitých dat z uživatelského domovského adresáře pomocí `rsync` a `BorgBackup`. Tento skript kombinuje robustnost BorgBackup pro efektivní a bezpečné archivování s datovou deduplikací a rychlost `rsync` pro synchronizaci souborů.
 
@@ -89,7 +89,7 @@ Skript `backup_script.sh` je určen pro zálohování důležitých dat z uživa
    ```
    
 
-### check_backups.sh
+### 6. check_backups.sh
 
 Skript `check_backups.sh` slouží k manuální kontrole záloh pomocí nástrojů BorgBackup a Rsync. Umožňuje rychle ověřit, zda byly zálohy úspěšně provedeny a zda počet souborů a složek v zdrojovém a cílovém adresáři odpovídá očekáváním.
 
@@ -100,7 +100,7 @@ Skript `check_backups.sh` slouží k manuální kontrole záloh pomocí nástroj
 ```bash
 ./check_backups.sh
 ```
- ### update_fork.sh
+ ### 7. update_fork.sh
 
 Skript `update_fork.sh` slouží k aktualizaci vašeho forku repozitáře Phanpy s nejnovějšími změnami z originálního repozitáře. Tento proces zahrnuje přidání upstream repozitáře (pokud ještě není nastaven), stahování změn z tohoto repozitáře, sloučení těchto změn do vaší hlavní větve a následný push změn zpět do vašeho repozitáře na GitHubu.
 
