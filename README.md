@@ -112,7 +112,35 @@ Skript `update_fork.sh` slouží k aktualizaci vašeho forku repozitáře Phanpy
 ```bash
    chmod +x update_fork.sh
 ```
-   
+### 8. backup_to_hetzner.sh
+
+Skript `backup_to_hetzner.sh` automatizuje proces přenosu záloh z lokálního úložiště na Hetzner Storage Box.
+
+### Příprava logovacího souboru
+
+Před prvním spuštěním skriptu je třeba vytvořit logovací soubor a nastavit patřičná oprávnění:
+
+```bash
+sudo touch /var/log/backup_transfer.log
+sudo chown $USER:$USER /var/log/backup_transfer.log
+sudo chmod 644 /var/log/backup_transfer.log
+```
+### Detaily skriptu
+
+Skript vykonává následující akce:
+
+- Kontroluje, zda logovací soubor existuje, a pokud ne, vytvoří ho.
+- Používá rsync pro synchronizaci dat z lokálního zdroje na vzdálený cíl.
+- Zaznamenává výsledek operace do logovacího souboru.
+
+Nastavení Cron Jobu 
+
+```bash
+crontab -e
+0 2 * * * /usr/local/bin/backup_to_hetzner.sh
+```
+
+
 ## Logy
 
 Logy ze skriptů jsou ukládány do souboru `/path/to/your/logs/nazev_skriptu.log`.
