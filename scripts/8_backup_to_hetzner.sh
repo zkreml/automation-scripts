@@ -2,7 +2,7 @@
 # Zdrojová složka záloh na HD2
 BACKUP_SRC="/mnt/backup/backup"
 # Cílový adresář na Hetzner Storage Boxu
-BACKUP_DEST="user@storagebox.hetzner.com:/path/to/backup"
+BACKUP_DEST="user@storagebox.hetzner.com:/home/cloudron-backups"
 # Logovací soubor
 LOG_FILE="/var/log/backup_transfer.log"
 
